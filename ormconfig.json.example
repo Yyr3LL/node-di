@@ -1,0 +1,41 @@
+[
+  {
+    "name": "default",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "username",
+    "password": "password",
+    "database": "e2e_test",
+    "synchronize": false,
+    "entities": [
+      "dist/models/*.js"
+    ]
+  },
+  {
+    "name": "dev",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "username",
+    "password": "password",
+    "database": "e2e_test",
+    "synchronize": false,
+    "entities": [
+      "dist/models/*.js"
+    ]
+  },
+  {
+    "name": "test",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "username",
+    "password": "password",
+    "database": "db",
+    "synchronize": false,
+    "entities": [
+      "src/models/*.ts"
+    ]
+  }
+]
