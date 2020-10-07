@@ -1,0 +1,1 @@
+export { FooController } from './foo/foo.controller';
