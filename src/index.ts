@@ -42,16 +42,16 @@ import { bindings } from "./infersify.config";
 (async () => {
     const container: Container = new Container();
     await container.loadAsync(bindings);
-    const app = new InversifyExpressServer(container);
-    app.setConfig((app) => {
+    const server = new InversifyExpressServer(container);
+    server.setConfig((app) => {
         app.use(bodyParser.urlencoded({
             extended: true
         }));
         app.use(bodyParser.json());
     })
-    const server = app.build();
+    const app = server.build();
 
-    server.listen(3000, () => {
+    app.listen(3000, () => {
         console.log('server is running on 3000 port');
     })
 })();
